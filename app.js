@@ -39,8 +39,10 @@ const explainResult = () => {
 };
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  console.log(score);
   const answersQuestion = getUserAnswers();
   finalResult(answersQuestion);
   explainResult();
   resultAnimation(0, score);
+  score = 0;
 });
